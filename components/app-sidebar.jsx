@@ -2,6 +2,9 @@
 
 import * as React from "react"
 import {
+  IconBasketSearch,
+  IconBracketsAngle,
+  IconCalendar,
   IconCamera,
   IconChartBar,
   IconDashboard,
@@ -35,36 +38,32 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "admin",
+    email: "admin@gmail.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Categories",
+      url: "/dashboard/categories",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
-      url: "#",
+      title: "Products",
+      url: "/dashboard/products",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
-      url: "#",
+      title: "Sales",
+      url: "/dashboard/sales",
       icon: IconFolder,
     },
-    {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
+   
   ],
   navClouds: [
     {
@@ -117,34 +116,25 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/dashboard/settings",
       icon: IconSettings,
     },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
+    
   ],
   documents: [
     {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
+      name: "Today Sales",
+      url: "/dashboard/reports/todaysales",
+      icon: IconCalendar,
     },
     {
-      name: "Reports",
-      url: "#",
+      name: "Weekly Sales",
+      url: "/dashboard/reports/weeklysales",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
-      url: "#",
+      name: "Monthly Sale",
+      url: "/dashboard/reports/monthlysales",
       icon: IconFileWord,
     },
   ],
@@ -160,8 +150,8 @@ export function AppSidebar({
           <SidebarMenuItem>
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <IconBasketSearch className="!size-5" />
+                <span className="text-base font-semibold">POS TWP</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
